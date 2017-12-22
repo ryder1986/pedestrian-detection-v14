@@ -101,7 +101,6 @@ private:
 
 class Tool1
 {
-
 public:
     enum LENGTH_FIXED_VALUE{
         STR_LENGTH=100,
@@ -124,6 +123,8 @@ public:
         MATCHED,
         NONE
     };
+public:
+
 
     static mutex lock;
 private:
