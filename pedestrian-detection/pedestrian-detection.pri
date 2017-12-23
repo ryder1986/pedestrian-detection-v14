@@ -29,13 +29,11 @@ unix{
     QMAKE_CXXFLAGS+="-std=c++11"
     INCLUDEPATH +="$$CVPATH/cv/opencv-linux-x86/include"
     LIBS+=-L$$CVPATH/cv/opencv-linux-x86/lib -lopencv_core -lopencv_highgui \
-       -lopencv_objdetect -lopencv_imgproc -lopencv_ml -lopencv_video -lX11 \
-    $$COMMON_LIB_PATH/libtools.a
+       -lopencv_objdetect -lopencv_imgproc -lopencv_ml -lopencv_video -lX11
     QMAKE_LIBS+=-lpthread
 }
 win32{
     INCLUDEPATH +="$$CVPATH/cv/opencv-vs2013-x86/include"
-    LIBS+= -L$$COMMON_LIB_PATH/ -ltools
 
     CONFIG(debug, debug|release){
         LIBS+=-L$$CVPATH\cv\opencv-vs2013-x86\lib -lopencv_core249d -lopencv_highgui249d\
